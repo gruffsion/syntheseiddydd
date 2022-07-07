@@ -4,6 +4,7 @@
    height: 100%; 
    overflow: hidden;
    background-color: rgba(191, 94, 59, 1);
+  user-select: none;
   }
 
 .grid-container {
