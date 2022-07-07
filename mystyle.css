@@ -1,6 +1,5 @@
  body {
    font-family: 'Roboto', sans-serif;
-   padding: 4px;
 }
 .grid-container {
   display: flex;  
@@ -11,17 +10,15 @@
 .settingsbar {
    display: flex;
   flex-wrap: wrap;
-  width: 50%;
-    height: auto;
+  width: 60%;
+    height: 20%;
   justify-content: space-evenly;
    margin: 1%; 
-   border:dotted 2px rgb(100, 100, 100);
+
    } 
 
 .oscillatorelect {
   grid-area: osc;
-  background-color:rgb(255, 255, 71);
-  border:dotted 2px rgb(100, 100, 100);
   flex-grow: 1;
 }
 
@@ -69,30 +66,28 @@
   flex-grow: 1;
 }
 
-.pianodisplay {
-  grid-area: piano;
-}
-
 
 
 ul {
   list-style: none;
   display: flex;
   align-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent;
+
 }
 
 ul .key {
   position: relative;
-  width: 60px;
-  height: 180px;
-  border:dotted 2px rgb(100, 100, 100);
-  border-right: none;
+  width: 6vh;
+  height: 18vh;
+  border:dotted 0.1em rgb(100, 100, 100);
   background: rgba(242, 225, 140, 1);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 10px;
+  padding-bottom: 0em;
   font-weight: bold;
 }
 ul .key:last-child {
@@ -100,21 +95,19 @@ ul .key:last-child {
 }
 ul .black-key {
   position: absolute;
-  top: -1px;
-  left: 37.5px;
-  width: 45px;
-  height: 110px;
+  top: -0.1em;
+  left: 4vh;
+  width: 4vh;
+  height: 10vh;
   background: black;
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 10px;
+  padding-bottom: 1em;
   color: white;
 }
-ul .active {
-  box-shadow: 0px 1px 3px #666;
-}
+
 
 
 
