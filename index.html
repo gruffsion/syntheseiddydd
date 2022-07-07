@@ -11,14 +11,7 @@
 </head>
 <body>
 <div class="grid-container">
-  <div class = "oscillatorelect">
-    <select id="oscselect" onchange=setOsc()>Oscillator
-    <option value="sine">Sin</option>
-    <option value="square">Sgwar</option>
-    <option value="triangle">Triongl</option>
-    <option value="sawtooth">Llif</option>
-  </select>
-    </div>
+ 
     <div class = "settingsbar">
   <div class = "ampsettings">
     <input id="attackslider" type="range" value="0" min="0" max="10" step="0.1" oninput="setAttack(this.value)">Gafael</input>
@@ -37,6 +30,15 @@
       <input id="reverbmix" type="range" min="0" max="70" step="1" oninput="setReverb(this.value)">Atsain</input>
     </div>
   </div>
+
+  <div class = "oscillatorelect">
+    <select id="oscselect" onchange=setOsc()>Oscillator
+    <option value="sine">Sin</option>
+    <option value="square">Sgwar</option>
+    <option value="triangle">Triongl</option>
+    <option value="sawtooth">Llif</option>
+  </select>
+    </div>
 
 <div class="pianodisplay">
     <ul id="piano">
