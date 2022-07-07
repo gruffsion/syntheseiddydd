@@ -66,6 +66,19 @@ piano.addEventListener("mouseup", e => {
    synth.triggerRelease();
 });
 
+piano.addEventListener("touchstart", e => {
+  synth.triggerAttack(e.target.dataset.note);
+});
+
+piano.addEventListener("touchend", e => {
+  synth.triggerRelease();
+});
+
+piano.addEventListener("touchmove", e => {
+  synth.triggerRelease();
+});
+
+
 
 document.addEventListener("keydown", e => {
    switch (e.key) {
