@@ -1,6 +1,11 @@
  body {
    font-family: 'Roboto', sans-serif;
-}
+   margin: 0; 
+   height: 100%; 
+   overflow: hidden;
+   background-color: rgba(191, 94, 59, 1);
+  }
+
 .grid-container {
   display: flex;  
   flex-direction: column;
@@ -10,16 +15,24 @@
 .settingsbar {
    display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 20%;
     height: 20%;
   justify-content: space-evenly;
    margin: 1%; 
-
+   
    } 
 
 .oscillatorelect {
   grid-area: osc;
   flex-grow: 1;
+  
+}
+
+#oscselect{
+  font-size: 2vh;
+  padding: 1vh;
+  background-color: rgba(242, 225, 140, 1);
+  border:solid 0.1em rgba(191, 94, 59, 1);
 }
 
 .ampsettings {
@@ -81,7 +94,7 @@ ul .key {
   position: relative;
   width: 6vh;
   height: 18vh;
-  border:dotted 0.1em rgb(100, 100, 100);
+  border:solid 0.1em rgba(191, 94, 59, 1);
   background: rgba(242, 225, 140, 1);
   cursor: pointer;
   display: flex;
@@ -90,9 +103,8 @@ ul .key {
   padding-bottom: 0em;
   font-weight: bold;
 }
-ul .key:last-child {
-  border-right: 1px solid black;
-}
+
+
 ul .black-key {
   position: absolute;
   top: -0.1em;
@@ -100,6 +112,7 @@ ul .black-key {
   width: 4vh;
   height: 10vh;
   background: black;
+  border:solid 0.1em rgba(191, 94, 59, 1);
   z-index: 999;
   display: flex;
   justify-content: center;
