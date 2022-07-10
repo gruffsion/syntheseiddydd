@@ -3,6 +3,13 @@ synth.portamento = 0.2;
 synth.volume.value = -10;
 }
 
+const filter = new Tone.Filter(8000, "lowpass").toDestination();
+const delay = new Tone.FeedbackDelay("16n", 0.8);
+delay.feedback.value = 0;
+const reverb = new Tone.Reverb(5);
+reverb.wet.value = 0;
+const dist = new Tone.Distortion(0.02).toDestination();
+
 function setOsc(){
   let e = document.getElementById("oscselect");
   synth.oscillator.type = e.value;
@@ -11,22 +18,19 @@ function setOsc(){
 
 function setAttack(val){
   synth.envelope.attack = val;
-  console.log ("Attack = " + val);
+  console.log ("att = " + val);
 }
 
 function setRelease(val){
   synth.envelope.release = val;
-  console.log ("Release = " + val);
+  console.log ("rel = " + val);
 }
 
-const filter = new Tone.Filter(8000, "lowpass").toDestination();
-const delay = new Tone.FeedbackDelay("16n", 0.8);
-const reverb = new Tone.Reverb(5);
-const dist = new Tone.Distortion(0.1).toDestination();
+
 
 function setFreq(val){
   filter.frequency.value = val;
-  console.log (val);
+  console.log ("res =" + val);
 }
 
 function setQ(val){
