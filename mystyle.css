@@ -210,7 +210,7 @@ justify-content: center;
   height: 18vw;
   width: 6vw;
   z-index: 1;
-  border-left: 0.12vw solid #AAAAAA;
+  border-left: 0.12vw solid rgba(191, 94, 59, 1);
   background-color: rgb(255, 255, 255);
 
 }
@@ -219,7 +219,7 @@ justify-content: center;
   height: 10vw;
   width: 3vw;
   z-index: 2;
-  border: 0.12vw solid #000000;
+  border: 0.12vw solid rgba(191, 94, 59, 1);
   background-color: #222222;
 
 }
