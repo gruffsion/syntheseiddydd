@@ -14,65 +14,64 @@
  
     <div class = "settingsbar">
   <div class = "ampsettings">
-    <input id="attackslider" type="range" value="0" min="0" max="10" step="0.1" oninput="setAttack(this.value)">Gafael</input>
-    <input id="releasessilder" type="range" value="5" min="0" max="30" step="0.1" oninput="setRelease(this.value)">Gollwng</input>
+    <input id="attackslider" type="range" value="0.5" min="0" max="3" step="0.1" oninput="setAttack(this.value)">gafael</input>
+    <input id="releasessilder" type="range" value="5" min="0" max="30" step="0.1" oninput="setRelease(this.value)">gollwng</input>
 </div>
     <div class = "filtersettings">
-        <input id="filterfreqslider" value="8000" type="range" min="30" max="8000" steps="1" oninput="setFreq(this.value)">Torri</input>
-        <input id="filterressilder" type="range" value="0" min="1" max="30" steps="1" oninput="setQ(this.value)">Gwrthsain</input>
+        <input id="filterfreqslider" value="8000" type="range" min="30" max="8000" steps="1" oninput="setFreq(this.value)">torri</input>
+        <input id="filterressilder" type="range" value="0" min="1" max="30" steps="1" oninput="setQ(this.value)">gwrthsain</input>
     </div>
     <div class = "delaysettings">
-      <input id="delaymix" type="range" min="0" max="95" step="1" oninput="setDelay(this.value)">Eco</input>
-      <input id="delaytime" type="range" min="0" max="0.5" step="0.01" oninput="setDelayTime(this.value)">Amser</input>
+      <input id="delaymix" type="range" value="0" min="0" max="95" step="1" oninput="setDelay(this.value)">eco</input>
+      <input id="delaytime" type="range" value="0" min="0" max="0.5" step="0.01" oninput="setDelayTime(this.value)">amser</input>
 
     </div>
     <div class = "reverbsettings">
-      <input id="reverbmix" type="range" min="0" max="70" step="1" oninput="setReverb(this.value)">Atsain</input>
+      <input id="reverbmix" type="range" value="0" min="0" max="70" step="1" oninput="setReverb(this.value)">atsain</input>
     </div>
   </div>
 
   <div class = "oscillatorelect">
     <select id="oscselect" onchange=setOsc()>Oscillator
-    <option value="sine">Sin</option>
-    <option value="square">Sgwar</option>
-    <option value="triangle">Triongl</option>
-    <option value="sawtooth">Llif</option>
+    <option value="sine">sin</option>
+    <option value="square">sgwâr</option>
+    <option value="triangle">triongl</option>
+    <option value="sawtooth">llif</option>
   </select>
     </div>
 
-<div class="pianodisplay">
-    <ul id="piano">
-    <li data-note="C4" class="key">
-      <div data-note="C#4" class="black-key"></div>
-      
-    </li>
-    <li data-note="D4" class="key">
-      <div data-note="D#4" class="black-key"></div>
-      
-    </li>
-    <li data-note="E4" class="key">
-      
-    </li>
-    <li data-note="F4" class="key">
-      <div data-note="F#4" class="black-key"></div>
-      
-    </li>
-    <li data-note="G4" class="key">
-      <div data-note="G#4" class="black-key"></div>
-      
-    </li>
-    <li data-note="A4" class="key">
-      <div data-note="A#4" class="black-key"></div>
-      
-    </li>
-    <li data-note="B4" class="key">
-      
-    </li>
-  </ul>
-</div>
- 
 
+  <ul id="piano">
+    <li class="key white c" data-note="C3"></li>
+    <li class="key black c_sharp" data-note="C#3"></li>
+    <li class="key white d" data-note="D3"></li>
+    <li class="key black d_sharp" data-note="D#3"></li>
+    <li class="key white e" data-note="E3"></li>
+    <li class="key white f" data-note="F3"></li>
+    <li class="key black f_sharp" data-note="F#3"></li>
+    <li class="key white g" data-note="G3"></li>
+    <li class="key black g_sharp" data-note="G#3"></li>
+    <li class="key white a" data-note="A3"></li>
+    <li class="key black a_sharp" data-note="A#3"></li>
+    <li class="key white b" data-note="B3"></li>
+    <li class="key white c" data-note="C4"></li>
+    <li class="key black c_sharp" data-note="C#4"></li>
+    <li class="key white d" data-note="D4"></li>
+    <li class="key black d_sharp" data-note="D#4"></li>
+    <li class="key white e" data-note="E4"></li>
+    <li class="key white f" data-note="F4"></li>
+    <li class="key black f_sharp" data-note="F#4"></li>
+    <li class="key white g" data-note="G4"></li>
+    <li class="key black g_sharp" data-note="G#4"></li>
+    <li class="key white a" data-note="A4"></li>
+    <li class="key black a_sharp" data-note="A#4"></li>
+    <li class="key white b" data-note="B4"></li>
+   
+  </div>
+
+ 
 </div>
+
 </body>
 
 <script src="https://unpkg.com/tone@14.7.58/build/Tone.js"></script>
