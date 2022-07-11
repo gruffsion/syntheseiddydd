@@ -61,13 +61,24 @@ synth.chain(filter, delay, reverb, dist);
 
 const piano = document.getElementById("piano");
 
-
 piano.addEventListener("mousedown", e => {
    synth.triggerAttack(e.target.dataset.note);
 });
 
+piano.addEventListener("touchstart", e => {
+  synth.triggerAttack(e.target.dataset.note);
+});
+
+piano.addEventListener("touchmove", e => {
+  synth.triggerAttack(e.target.dataset.note);
+});
+
 piano.addEventListener("mouseup", e => {
    synth.triggerRelease();
+});
+
+piano.addEventListener("touchend", e => {
+  synth.triggerRelease();
 });
 
 
