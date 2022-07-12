@@ -15,11 +15,11 @@
  
     <div class = "settingsbar">
   <div class = "ampsettings">
-    <input id="attackslider" type="range" value="0.5" min="0" max="3" step="0.1" oninput="setAttack(this.value)">gafael</input>
+    <input id="attackslider" type="range" value="0" min="0" max="3" step="0.1" oninput="setAttack(this.value)">gafael</input>
     <input id="releasessilder" type="range" value="5" min="0" max="30" step="0.1" oninput="setRelease(this.value)">gollwng</input>
 </div>
     <div class = "filtersettings">
-        <input id="filterfreqslider" value="8000" type="range" min="30" max="8000" steps="1" oninput="setFreq(this.value)">torri</input>
+        <input id="filterfreqslider" value="8000" type="range" min="100" max="8000" steps="1" oninput="setFreq(this.value)">torri</input>
         <input id="filterressilder" type="range" value="0" min="1" max="30" steps="1" oninput="setQ(this.value)">gwrthsain</input>
     </div>
     <div class = "delaysettings">
@@ -33,11 +33,12 @@
   </div>
 
   <div class = "oscillatorelect">
-    <select id="oscselect" onchange=setOsc()>Oscillator
+    <select id="oscselect" onchange=setOsc(),setup()>Oscillator
     <option value="sine">sin</option>
     <option value="square">sgwâr</option>
     <option value="triangle">triongl</option>
     <option value="sawtooth">llif</option>
+
   </select>
     </div>
 
@@ -70,7 +71,11 @@
    
   </div>
 
- 
+
+
+
+
+
 </div>
 
 </body>
