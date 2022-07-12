@@ -1,14 +1,17 @@
+
+
 const synth = new Tone.Synth();{
-synth.portamento = 0.2;
+synth.portamento = 0;
 synth.volume.value = -10;
 }
 
 const filter = new Tone.Filter(8000, "lowpass").toDestination();
 const delay = new Tone.FeedbackDelay("16n", 0.8);
 delay.feedback.value = 0;
-const reverb = new Tone.Reverb(5);
+delay.delayTime = 0;
+const reverb = new Tone.Reverb(10).toDestination();
 reverb.wet.value = 0;
-const dist = new Tone.Distortion(0.02).toDestination();
+const dist = new Tone.Distortion(0.5)
 
 function setOsc(){
   let e = document.getElementById("oscselect");
@@ -57,28 +60,19 @@ function setReverb(val){
 
 
 
-synth.chain(filter, delay, reverb, dist);
+synth.chain(dist, filter, delay, reverb);
 
 const piano = document.getElementById("piano");
+
 
 piano.addEventListener("mousedown", e => {
    synth.triggerAttack(e.target.dataset.note);
 });
 
-piano.addEventListener("touchstart", e => {
-  synth.triggerAttack(e.target.dataset.note);
-});
 
-piano.addEventListener("touchmove", e => {
-  synth.triggerAttack(e.target.dataset.note);
-});
 
 piano.addEventListener("mouseup", e => {
    synth.triggerRelease();
-});
-
-piano.addEventListener("touchend", e => {
-  synth.triggerRelease();
 });
 
 
@@ -132,7 +126,4 @@ document.addEventListener("keyup", e => {
   }
 });
 
-document.querySelector('playButton')?.addEventListener('click', async () => {
-	Tone.start()
-	console.log('audio is ready')
-})
+
