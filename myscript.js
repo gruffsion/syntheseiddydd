@@ -6,7 +6,7 @@ synth.volume.value = -10;
 }
 
 const filter = new Tone.Filter(8000, "lowpass").toDestination();
-const delay = new Tone.FeedbackDelay("16n", 0.8);
+const delay = new Tone.FeedbackDelay(0, 0);
 delay.feedback.value = 0;
 delay.delayTime = 0;
 const reverb = new Tone.Reverb(10).toDestination();
